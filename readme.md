@@ -1,4 +1,4 @@
-# How to compute Statistical Volatility of stock value
+# How to compute Statistical Volatility of stock value 
 
 ## Volatility measures how large an asset's price swing around the mean price (i.e a statistical measure of its dispersion of returns).
 
