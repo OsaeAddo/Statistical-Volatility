@@ -1,8 +1,4 @@
-import math
-
-import numpy as np
-import yfinance as yf
-
+from ._base_data import *
 
 data = yf.download("AAPL", start="2017-01-01", end="2022-06-30")
 
