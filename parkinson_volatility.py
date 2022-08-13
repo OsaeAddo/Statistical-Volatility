@@ -1,8 +1,6 @@
 # Parkinson's uses the asset's opening & closing prices rather than just the closing price
-import math
+from ._base_data import *
 
-import numpy as np
-import yfinance as yf 
 
 data = yf.download("AAPL", start="2017-01-01", end="2022-06-30")
 
