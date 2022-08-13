@@ -2,8 +2,6 @@
 from ._base_data import *
 
 
-data = yf.download("AAPL", start="2017-01-01", end="2022-06-30")
-
 def parkinson(price_data, window=30, trading_periods=252, clean=True):
     rs = (1.0 / (4.0 * math.log(2.0))) * (
         (price_data["High"] / price_data["Low"]).apply(np.log)
