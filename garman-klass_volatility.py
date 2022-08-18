@@ -10,4 +10,14 @@ def garman_klass(price_data, window=30, trading_periods=252, clean=True):
     def f(v):
         return (trading_periods * v.mean()) ** 0.5
     
-    result = rs.rolling(window=window, center=False)
+    result = rs.rolling(window=window, center=False).apply(func=f)
+    
+    if clean:
+        return result.dropna()
+    else:
+        return result
+    
+    
+    
+if __name__ == "__main__":
+    garman_klass(data).plot()
