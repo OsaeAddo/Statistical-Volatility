@@ -19,3 +19,8 @@ def hodges_tompkins(price_data, window=30, trading_periods=252, clean=True):
         return result.dropna()
     else:
         return result
+    
+    
+
+if __name__ == "__main__":
+    hodges_tompkins(data).plot()
