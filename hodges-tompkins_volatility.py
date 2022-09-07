@@ -14,3 +14,8 @@ def hodges_tompkins(price_data, window=30, trading_periods=252, clean=True):
     adj_factor  = 1.0 / (1.0 - (h/n) + ((h ** 2 - 1) / (3*n**2)) )
     
     result = vol * adj_factor
+    
+    if clean:
+        return result.dropna()
+    else:
+        return result
